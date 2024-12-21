@@ -16,4 +16,7 @@ export default defineConfig({
     },
     sourcemap: true,
   },
+  compilerOptions: {
+    tsconfigPath: resolve(__dirname, "tsconfig.json"),
+  }
 });

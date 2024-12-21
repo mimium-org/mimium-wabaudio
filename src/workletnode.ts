@@ -32,8 +32,8 @@ export class MimiumProcessorNode extends AudioWorkletNode {
       });
     } else if (event.type === "error_wasm_load") {
       console.error(event.data);
-    }else if (event.type ==="stop"){
-      this.disconnect()
+    } else if (event.type === "stop") {
+      this.disconnect();
     }
   }
 }

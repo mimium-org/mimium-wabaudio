@@ -3,8 +3,9 @@ import { MimiumProcessorNode, CompileData } from "./workletnode";
 import wasmurl from "mimium-web/mimium_web_bg.wasm?url";
 
 export { MimiumProcessorNode, MimiumProcessor };
+export type { CompileData } from "./workletnode";
 
-export default async function setupAudioWorklet(src: string) {
+export async function setupAudioWorklet(src: string) {
   const userMedia = await navigator.mediaDevices.getUserMedia({
     audio: true,
     video: false,

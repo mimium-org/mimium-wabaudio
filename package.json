@@ -1,0 +1,34 @@
+{
+  "name": "mimium-wabaudio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "webaudio audioworklet module to run mimium code on web browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mimium-org/mimium-webaudio.git"
+  },
+  "keywords": [
+    "mimium"
+  ],
+  "author": "Tomoya Matsuura",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/mimium-org/mimium-webaudio/issues"
+  },
+  "homepage": "https://github.com/mimium-org/mimium-webaudio#readme",
+  "dependencies": {
+    "mimium-web": "^2.2.3",
+    "vite-plugin-top-level-await": "^1.4.4",
+    "vite-plugin-wasm": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/audioworklet": "^0.0.65",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}

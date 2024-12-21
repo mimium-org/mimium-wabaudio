@@ -1,9 +1,10 @@
 {
   "name": "@mimium/mimium-webaudio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "webaudio audioworklet module to run mimium code on web browser.",
-  "main": "index.js",
+  "main": "dist/mimium-webaudio.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

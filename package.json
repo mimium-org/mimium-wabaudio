@@ -1,6 +1,6 @@
 {
   "name": "@mimium/mimium-webaudio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "webaudio audioworklet module to run mimium code on web browser.",
   "main": "index.js",

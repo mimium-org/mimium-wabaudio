@@ -4,7 +4,7 @@ import wasmurl from "mimium-web/mimium_web_bg.wasm?url";
 
 export { MimiumProcessorNode, MimiumProcessor };
 
-export const setupAudioWorklet = async (src: string) => {
+export default async function setupAudioWorklet(src: string) {
   const userMedia = await navigator.mediaDevices.getUserMedia({
     audio: true,
     video: false,
@@ -39,4 +39,4 @@ export const setupAudioWorklet = async (src: string) => {
       `Failed to load audio analyzer WASM module. Further info: ${err.message}`
     );
   }
-};
+}

@@ -1,4 +1,4 @@
-import "./textencoder.js";
+import "./textencoder.mjs";
 
 import init, { Context, Config } from "mimium-web";
 

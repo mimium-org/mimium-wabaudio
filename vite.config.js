@@ -6,17 +6,20 @@ import checker from "vite-plugin-checker";
 
 export default defineConfig({
   plugins: [topLevelAwait(), dts(), checker({ types: "tsc" })],
+  resolve: {
+    preserveSymlinks: true,
+  },
   build: {
-    minify: true,
+    // minify: true,
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: [
+        resolve(__dirname, "src/index.mts"),
+        resolve(__dirname, "src/audioprocessor.mts"),
+      ],
+      formats: ["es"],
       name: "mimium_webaudio",
-      formats: ["es", "umd"],
-      fileName: () => "mimium-webaudio.js",
+      fileName: (format, entryname) => `${entryname}.mjs`,
     },
     sourcemap: true,
-  },
-  compilerOptions: {
-    tsconfigPath: resolve(__dirname, "tsconfig.json"),
   },
 });

@@ -1,11 +1,19 @@
-import MimiumProcessor from "./audioprocessor.js?worker&url";
-import { MimiumProcessorNode, CompileData } from "./workletnode";
+// import MimiumProcessorSrc from "./audioprocessor.js?raw";
+// const processorBlob = new Blob([MimiumProcessorSrc], {
+//   type: "text/javascript",
+// });
+// const MimiumProcessorUrl = URL.createObjectURL(processorBlob);
+// import MimiumProcessorUrl from "./audioprocessor.ts?url";
+
+import { MimiumProcessorNode, CompileData } from "./workletnode.ts";
 import wasmurl from "mimium-web/mimium_web_bg.wasm?url";
+export { MimiumProcessorNode };
+export type { CompileData } from "./workletnode.ts";
 
-export { MimiumProcessorNode, MimiumProcessor };
-export type { CompileData } from "./workletnode";
-
-export async function setupAudioWorklet(src: string) {
+export async function setupAudioWorklet(
+  src: string,
+  MimiumProcessorUrl: string
+) {
   const userMedia = await navigator.mediaDevices.getUserMedia({
     audio: true,
     video: false,
@@ -16,11 +24,11 @@ export async function setupAudioWorklet(src: string) {
     const response = await window.fetch(wasmurl);
     const wasmBytes = await response.arrayBuffer();
     try {
-      await audioContext.audioWorklet.addModule(MimiumProcessor);
+      await audioContext.audioWorklet.addModule(MimiumProcessorUrl);
     } catch (e) {
       let err = e as unknown as Error;
       throw new Error(
-        `Failed to load audio analyzer worklet at url: ${MimiumProcessor}. Further info: ${err.message}`
+        `Failed to load audio analyzer worklet at url: ${MimiumProcessorUrl}. Further info: ${err.message}`
       );
     }
     audioNode = new MimiumProcessorNode(audioContext, "MimiumProcessor");

@@ -2,7 +2,7 @@ import MimiumProcessor from "./audioprocessor.js?worker&url";
 import { MimiumProcessorNode, CompileData } from "./workletnode";
 import wasmurl from "mimium-web/mimium_web_bg.wasm?url";
 
-export { MimiumProcessorNode, MimiumProcessor, CompileData };
+export { MimiumProcessorNode, MimiumProcessor };
 
 export const setupAudioWorklet = async (src: string) => {
   const userMedia = await navigator.mediaDevices.getUserMedia({

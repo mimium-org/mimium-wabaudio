@@ -1,6 +1,6 @@
 {
   "name": "@mimium/mimium-webaudio",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "description": "webaudio audioworklet module to run mimium code on web browser.",
   "main": "dist/mimium-webaudio.js",
@@ -28,15 +28,18 @@
   },
   "homepage": "https://github.com/mimium-org/mimium-webaudio#readme",
   "dependencies": {
-    "mimium-web": "^2.2.3",
     "vite-plugin-top-level-await": "^1.4.4",
     "vite-plugin-wasm": "^3.4.1"
+  },
+  "peerDependencies": {
+    "mimium-web": "^2.2.3"
   },
   "devDependencies": {
     "@types/audioworklet": "^0.0.65",
     "@types/node": "^22.10.2",
     "typescript": "^5.7.2",
     "vite": "^6.0.3",
+    "vite-plugin-checker": "^0.8.0",
     "vite-plugin-dts": "^4.4.0"
   }
 }

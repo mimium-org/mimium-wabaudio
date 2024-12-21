@@ -1,5 +1,5 @@
 {
-  "name": "mimium-wabaudio",
+  "name": "@mimium/mimium-wabaudio",
   "version": "1.0.0",
   "type": "module",
   "description": "webaudio audioworklet module to run mimium code on web browser.",

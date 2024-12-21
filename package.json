@@ -1,6 +1,6 @@
 {
   "name": "@mimium/mimium-webaudio",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "description": "webaudio audioworklet module to run mimium code on web browser.",
   "main": "dist/mimium-webaudio.js",
@@ -15,6 +15,12 @@
   "keywords": [
     "mimium"
   ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/mimium-webaudio.js"
+  },
   "author": "Tomoya Matsuura",
   "license": "MPL-2.0",
   "bugs": {

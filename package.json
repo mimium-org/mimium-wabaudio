@@ -35,7 +35,7 @@
     "vite-plugin-wasm": "^3.4.1"
   },
   "devDependencies": {
-    "mimium-web": "^2.2.3",
+    "mimium-web": "^2.2.4",
     "@types/audioworklet": "^0.0.65",
     "@types/node": "^22.10.2",
     "typescript": "^5.7.2",
